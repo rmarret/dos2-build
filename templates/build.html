@@ -84,9 +84,11 @@
             {% endfor %}
         {% endfor %}
     </div>
+    {% if build['tips']|length > 0 %}
     <ul class="tips">
         {% for tips in build['tips'] %}
             <li>{{ tips }}</li>
         {% endfor %}
     </ul>
+    {% endif %}
 {% endblock %}

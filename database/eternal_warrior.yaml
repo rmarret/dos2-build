@@ -47,19 +47,17 @@ juggernaut:
     - Uncanny Evasion
     - Adrenaline
   opt-skills:
-    - '1 target skill preventing attack'
+    - '1 target status preventing attacking'
     - '1 AP defensive or utility'
-    - 'Focus on Dmg'
   equipments:
-    - sword: ['Crit Chance > Life Steal > War > Str > 2H']
-    - armor: ['Balanced', 'Armor > War > Necro ; 2H, Wits, +1/2: Aero, Hydro, Scoundrel']
+    - sword: ['Crit Ch > Life Steal',  '> War > Str > 2H']
+    - armor: ['Balanced (Int) ; Arm > War > Necro', 'Nice: 2H, Wits, 1-2: Aer, Hydr, Scou']
   tips:
+    - 'Play offensively: Dmg & CC ; Keep Armors > 0'
+    - 'Take out or CC Phy Dmg foes first'
+    - 'Save 1 AP: Danger = Defensive (Bone Cage, Armour of Frost, Uncanny Evasion) ; Prepare = Utility (Challenge, Vampiric Hunger, Skin Graft)'
+    - 'CD: Teleport or Phoenix Dive to max Whirlwind or Battle Stomp'
+    - 'Bull Rush (1 CD, Bleeding) > Blitz Attack'
+    - 'Time carefully Bone Cage'
     - 'Magic Armour: Vampiric Hunger + Living Armour'
     - 'Physical Armour: Bone Cage & Challenge'
-    - 'Need to play offensively: Dmg & CC'
-    - 'Pay attention to cooldown: Teleport or Phoenix Dive to Whirlwind or Battle Stomp more foes'
-    - 'Take out / CC Phy Dmg foes first'
-    - 'Time carefully Bone Cage'
-    - 'Save 1 AP for a defensive Skill (Bone Cage, Armour of Frost, Uncanny Evasion) if in danger or utility (Challenge, Vampiric Hunger, Skin Graft) to prepare next turn'
-    - 'Prefer Bull Rush (1 cooldown, Bleeding) over Blitz Attack'
-    - 'Always keep Armors > 0'

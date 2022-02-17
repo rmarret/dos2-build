@@ -18,13 +18,17 @@ body {
 .line {
     display: -webkit-box;
     display: flex;
+    font-size: 0px;
     align-items: center;
+    min-height: 64px;
 }
 .line-wrap {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
     font-size: 0px;
+    align-items: center;
+    min-height: 64px;
 }
 .centered {
     display: table-cell;
@@ -64,7 +68,7 @@ body {
     list-style: url('../img/misc-small.png');
     padding: 8px 8px 8px 30px;
     margin: 0px;
-    font-size: 21px;
+    font-size: 20px;
 }
 .placeholder {    
     content:url(http://placehold.it/128x128);
