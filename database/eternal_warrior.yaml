@@ -1,0 +1,65 @@
+juggernaut:
+  name: Eternal Warrior
+  role: Warrior
+  portrait: Fane
+  damage:
+  - Physical
+  race:
+    - Elf (Flesh Sacrifice + Skin Graft)
+    - Compatible Undead
+    - Any
+  main-abilities:
+    - Warfare
+    - Polymorph
+  attributes:
+    strength: 'Max'
+    finesse: ''
+    intelligence: '3/4'
+    constitution: '~'
+    memory: '~'
+    wits: '+'
+  abilities:
+    - warfare: '+2'
+    - necromancer: '+1'
+    - polymorph: '3'
+    - aerotheurge: '2'
+    - scoundrel: '1'
+    - hydrosophist: '1'
+  talents:
+  - Opportunist
+  - Living Armour
+  - Executioner
+  - Hothead
+  skills:
+    - Battle Stomp
+    - Battering Ram
+    - Whirlwind
+    - Blitz Attack
+    - Phoenix Dive
+    - Challenge
+    - Tentacle Lash
+    - Bull Horns
+    - Skin Graft
+    - Vampiric Hunger
+    - Armour of Frost
+    - Bone Cage
+    - Teleportation
+    - Uncanny Evasion
+    - Adrenaline
+  opt-skills:
+    - '1 target skill preventing attack'
+    - '1 AP defensive or utility'
+    - 'Focus on Dmg'
+  equipments:
+    - sword: ['Crit Chance > Life Steal > War > Str > 2H']
+    - armor: ['Balanced', 'Armor > War > Necro ; 2H, Wits, +1/2: Aero, Hydro, Scoundrel']
+  tips:
+    - 'Magic Armour: Vampiric Hunger + Living Armour'
+    - 'Physical Armour: Bone Cage & Challenge'
+    - 'Need to play offensively: Dmg & CC'
+    - 'Pay attention to cooldown: Teleport or Phoenix Dive to Whirlwind or Battle Stomp more foes'
+    - 'Take out / CC Phy Dmg foes first'
+    - 'Time carefully Bone Cage'
+    - 'Save 1 AP for a defensive Skill (Bone Cage, Armour of Frost, Uncanny Evasion) if in danger or utility (Challenge, Vampiric Hunger, Skin Graft) to prepare next turn'
+    - 'Prefer Bull Rush (1 cooldown, Bleeding) over Blitz Attack'
+    - 'Always keep Armors > 0'

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %} Divinity Original Sin 2 Build Cards {% endblock %}
+
+{% block content %}
+    <div class="line">
+        <img id="portrait" class="large" src="{{ url_for('static', filename= 'img/' + get_image(build['portrait'])) }}"></img>
+        <div>
+            <div class="line">
+                <img id="role" class="medium" src="{{ url_for('static', filename= 'img/' + get_image(build['role'])) }}"></img>
+                <div class="medium-col">
+                    {% if 'Physical' in build['damage'] %}
+                        <img id="physical-damage" class="small" src="{{ url_for('static', filename= 'img/damages_physical.png') }}"></img>
+                    {% else %}
+                        <img class="small" src="{{ url_for('static', filename= 'img/misc/empty.png') }}"></img>
+                    {% endif %}
+                    {% if 'Magical' in build['damage'] %}
+                        <img id="magical-damage" class="small" src="{{ url_for('static', filename= 'img/damages_magical.png') }}"></img>
+                    {% endif %}
+                </div>
+                <div><div id="name" class="centered">{{ build['name'] }}</div></div>
+            </div>
+            <div id="main-abilities" class="line">
+                {% for ab in build['main-abilities'] %}
+                    <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(ab)) }}"></img>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div id="attributes" class="line">
+        {% for att in ['strength', 'finesse', 'intelligence', 'constitution', 'memory', 'wits' ] %}
+        <div>
+            <div><div class="medium-row centered text">{{ att[0:3] }}</div></div>
+            <div class="medium-row centered text">{{ build['attributes'][att] if build['attributes'][att] is not none }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    <div id="abilities" class="line-wrap">
+        {% for ab in build['abilities'] %}
+            {% for k, v in ab.items() %}
+            <div>
+                <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(k)) }}"></img>
+                <div class="medium-row centered text">{{ v }}</div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div id="talents" class="line-wrap">
+        {% for tal in build['talents'] %}
+            <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(tal)) }}"></img>
+        {% endfor %}
+    </div>
+    <div id="skills" class="line-wrap">
+        {% for skill in build['skills'] %}
+            <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(skill)) }}"></img>
+        {% endfor %}
+    </div>
+    <div id="opt-skills" class="line-wrap">
+        {% set images, texts = get_images_and_texts(build['opt-skills']) %}
+        {% for skill in images %}
+            <img class="small" src="{{ url_for('static', filename= 'img/' + skill) }}"></img>
+        {% endfor %}
+        {% if texts|length > 0 %}
+            <ul class="list">
+            {% for opt in texts %}
+                <li>{{ opt }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+    <div id="equipments" class="line">
+        {% for eq in build['equipments'] %}
+            {% for k, v in eq.items() %}
+                <img class="small" src="{{ url_for('static', filename= 'img/' + get_image(k)) }}"></img>
+                {% if v|length > 0 %}
+                <div>
+                    <ul class="list">
+                        {% for bonus in v %}
+                            <li>{{ bonus }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <ul class="tips">
+        {% for tips in build['tips'] %}
+            <li>{{ tips }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

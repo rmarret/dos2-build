@@ -1,0 +1,60 @@
+juggernaut:
+  name: Juggernaut
+  role: Warrior
+  portrait: The Red Prince
+  damage:
+  - Physical
+  - Magical
+  race: ['?']
+  main-abilities:
+    - Warfare
+    - Geomancer
+    - Polymorph
+  attributes:
+    strength: 'Max'
+    finesse: ''
+    intelligence: ''
+    constitution: '~'
+    memory: ''
+    wits: '~'
+  abilities:
+    - warfare: '+2'
+    - geomancer: '+1'
+    - polymorph: '3'
+  talents:
+  - Opportunist
+  - The Pawn
+  - Picture Of Health
+  - Savage Sortilege
+  - Far Out Man
+  - Hothead
+  skills:
+    - Battering Ram
+    - Battle Stomp
+    - Bouncing Shield
+    - Whirlwind
+    - Deflective Barrier
+    - Challenge
+    - Thick Of The Fight
+    - Fortify
+    - Oily Carapace
+    - Earthquake
+    - Reactive Armour
+    - Venom Coating
+    - Tentacle Lash
+    - Chicken Claw
+    - Medusa Head
+    - Skin Graft
+  opt-skills:
+    - Armour Of Frost
+    - Spider Legs
+  equipments:
+    - sword: []
+    - shield: []
+    - armor: ["Physical", "Master Rune"]
+  tips:
+    - "Petrifying Visage, scale with str, primary magic damage"
+    - "Spider Legs at beginning"
+    - "Salvage Sortilege & Hothead : needs good crit chance"
+    - "Hothead best with high initiative"
+

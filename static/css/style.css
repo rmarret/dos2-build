@@ -1,0 +1,71 @@
+html {
+    background-color: ghostwhite;
+    color: white;
+    text-transform: uppercase;
+}
+body {
+    background-color: black;
+    width: 768px;
+    margin:  0 auto;
+    display: block;
+}
+#name {
+    width: 320px;
+    height: 128px;
+    font-size: 32px;
+    text-align: center;
+}
+.line {
+    display: -webkit-box;
+    display: flex;
+    align-items: center;
+}
+.line-wrap {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0px;
+}
+.centered {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.small {
+    width: 64px;
+    height: 64px;
+}
+.medium {
+    width: 128px;
+    height: 128px;
+}
+.medium-row {
+    width: 128px;
+    height: 64px;
+}
+.medium-col {
+    width: 64px;
+    height: 128px;
+}
+.large {
+    width: 256px;
+    height: 256px;
+}
+.text {
+    font-size: 28px;
+}
+.list {
+    list-style: none;
+    padding: 0 0 0 8px;
+    margin: 0px;
+    font-size: 21px;
+}
+.tips {
+    list-style: url('../img/misc-small.png');
+    padding: 8px 8px 8px 30px;
+    margin: 0px;
+    font-size: 21px;
+}
+.placeholder {    
+    content:url(http://placehold.it/128x128);
+}
