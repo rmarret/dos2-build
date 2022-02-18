@@ -5,13 +5,22 @@
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
-
+    {% if force_print %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/print.css') }}">
+    {% else %}
+    <link rel="stylesheet" media="print" href="{{ url_for('static', filename= 'css/print.css') }}">
+    {% endif %}
     <!-- Bootstrap CSS
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
+      <nav class="no-print">
+        {% for build in builds %}
+        <a class="bar-item {% if build[2] %}selected{% endif %} button" href="{{ '/build/' + build[1] }}">{{ build[0] }}</a>
+        {% endfor %}
+    </nav>
     <div class="container">
         {% block content %} {% endblock %}
     </div>

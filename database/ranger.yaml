@@ -1,0 +1,64 @@
+build:
+  name: Ranger
+  role: Ranger
+  portrait: Sebille
+  damage:
+  - Physical
+  - Magical
+  race:
+    - Elf (Flesh Sacrifice, Elemental Arrows)
+    - Ifan (Wolf)
+  main-abilities:
+    - Huntsman
+    - Summoning
+  attributes:
+    strength: ''
+    finesse: '+2'
+    intelligence: ''
+    constitution: '~'
+    memory: ''
+    wits: '+1'
+  abilities:
+    - warfare: 'Max'
+    - summoning: 'Max'
+    - huntsman: '3'
+    - ranged: '+'
+  talents:
+  - Far Out Man
+  - Elemental Ranger
+  - Executioner
+  - Arrow Recovery
+  - Hothead
+  - Pet Pal
+  skills:
+    - First Aid
+    - Tactical Retreat
+    - Ricochet
+    - Sky Shot
+    - Ballistic Shot
+    - Marksman's Fang
+    - Arrow Spray
+    - Conjure Incarnate
+    - Farsight Infusion
+    - Power Infusion
+    - Soul Mate
+    - Dominate Mind
+  opt-skills:
+    - Adrenaline
+    - Haste
+    - Elemental Arrowheads
+    - Necromancer
+    - Living Armour
+    - Necromancer
+    - Encourage
+    - 'Any Hunt Skill'
+    - 'Any Summon Skill (Necro)'
+  equipments:
+    - bow: ['Dmg > Bonus']
+    - armor: ['Balanced']
+  tips:
+    - 'Position high & away'
+    - 'Magic Dmg: elemental arrow, elemental Incarnate'
+    - 'Necro & Living Armour if using Soul Mate'
+    - 'Elemental Arrowhead if Elf'
+    - 'Hothead best with high initiative'

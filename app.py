@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, send_from_directory, send_file, url_for
 from flask_weasyprint import HTML, render_pdf
 import yaml
-from os import path
+from os import path, listdir
+from os.path import isfile, join
 from io import BytesIO
 import imgkit
 import json
@@ -14,7 +15,7 @@ with open('database/database.json') as f:
 
 
 def get_image(name):
-    key = '_'.join(name.split(' ')).lower()
+    key = '_'.join(name.split(' ')).lower().replace("'", '')
     for k in db.keys():
         for entry in db[k]:
             if entry['key'] == key:
@@ -34,6 +35,13 @@ def get_images_and_texts(list):
     return images, texts
 
 
+def get_builds(current):
+    path = 'database'
+    builds = [f.split('.')[0] for f in listdir(path) if isfile(join(path, f)) and (f.lower().endswith('.yaml') or f.lower().endswith('.yml'))]
+    builds = [[f.title().replace('_', ' '), f, f==current] for f in builds]
+    return builds
+
+
 def get_build(name):
     name = 'database/' + name + ('.yaml' if not name.endswith('.yaml') else '')
     if not path.exists(name):
@@ -47,17 +55,19 @@ def get_build(name):
 @app.route('/build/<name>')
 def index(name):
     build = get_build(name)
+    force_print = 'print' in request.args
     if build is None:
         return 'Unknown build'
-    return render_template('build.html', build=list(build.values())[0], get_image=get_image, get_images_and_texts=get_images_and_texts)
+    return render_template('build.html', build=list(build.values())[0], builds=get_builds(name),
+        get_image=get_image, get_images_and_texts=get_images_and_texts,
+        force_print=force_print)
 
-@app.route('/dl/', defaults={'name': ''})
-@app.route('/dl/<name>')
+
+@app.route('/image/', defaults={'name': ''})
+@app.route('/image/<name>')
 def image(name):
-    options = {
-        'format': 'png',
-    }
-    img = imgkit.from_url(request.url_root + '/build/' + name, False, options=options)
+    options = { 'format': 'png' }
+    img = imgkit.from_url(request.url_root + '/build/' + name + '?print', False, options=options)
     #img = imgkit.from_string(index(), False, options=options)
     #return send_file(img, attachment_filename='build.png')
     return send_file(

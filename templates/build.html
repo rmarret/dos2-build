@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% block title %} Divinity Original Sin 2 Build Cards {% endblock %}
-
 {% block content %}
     <div class="line">
         <img id="portrait" class="large" src="{{ url_for('static', filename= 'img/' + get_image(build['portrait'])) }}"></img>
@@ -18,7 +16,7 @@
                         <img id="magical-damage" class="small" src="{{ url_for('static', filename= 'img/damages_magical.png') }}"></img>
                     {% endif %}
                 </div>
-                <div><div id="name" class="centered">{{ build['name'] }}</div></div>
+                <div><div id="name" class="centered">{% block title %}{{ build['name'] }}{% endblock %}</div></div>
             </div>
             <div id="main-abilities" class="line">
                 {% for ab in build['main-abilities'] %}

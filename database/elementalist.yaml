@@ -1,0 +1,60 @@
+build:
+  name: Elementalist
+  role: Mage
+  portrait: Lohse
+  damage:
+  - Magical
+  race: ['Human (Crit Chance)']
+  main-abilities:
+    - Pyrokinetic
+    - Aerotheurge
+    - Hydrosophist
+    - Geomancer
+  attributes:
+    strength: ''
+    finesse: ''
+    intelligence: '+2'
+    constitution: '+1'
+    memory: '+1'
+    wits: ''
+  abilities:
+    - pyrokinetic: '3 / 5'
+    - aerotheurge: '3 / 5'
+    - hydrosophist: '3 / 5'
+    - geomancer: '3 / 5'
+    - polymorph: 'Max'
+    - ranged: '+'
+  talents:
+  - Mnemonic
+  - Elemental Affinity
+  - Savage Sortilege
+  - Far Out Man
+  - Hothead
+  skills:
+    - Fossil Strike
+    - Impalement
+    - Teleportation
+    - Chain Lightning
+    - Armour Of Frost
+    - Winter Blast
+    - Fireball
+    - Meteor Shower
+    - Tactical Retreat
+    - Farsight
+    - Apothesis
+  opt-skills:
+    - Necromancer
+    - Executioner
+    - Torturer
+    - More Elemental Skills
+    - Some Necro Skills (Physical Dmg)
+  equipments:
+    - wand: ['Bonus >> Dmg']
+    - shield: []
+    - armor: ['Int > Crit Chance', 'Nice: Pyro Hydro Geo Aero']
+  tips:
+    - 'Control battle field, create barriers, do Dmg'
+    - 'Complex to master: think before acting'
+    - 'Salvage Sortilege & Hothead: needs good Crit Chance'
+    - 'Hothead best with high initiative'
+    - 'Torturer: only 2 damaging effects, burn & poison'
