@@ -35,12 +35,10 @@
     </div>
     <div id="abilities" class="line-wrap">
         {% for ab in build['abilities'] %}
-            {% for k, v in ab.items() %}
             <div>
-                <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(k)) }}"></img>
-                <div class="medium-row centered text">{{ v }}</div>
+                <img class="medium" src="{{ url_for('static', filename= 'img/' + get_image(ab['ability'])) }}"></img>
+                <div class="medium-row centered text">{{ ab['value'] }}</div>
             </div>
-            {% endfor %}
         {% endfor %}
     </div>
     <div id="talents" class="line-wrap">
@@ -68,18 +66,16 @@
     </div>
     <div id="equipments" class="line">
         {% for eq in build['equipments'] %}
-            {% for k, v in eq.items() %}
-                <img class="small" src="{{ url_for('static', filename= 'img/' + get_image(k)) }}"></img>
-                {% if v|length > 0 %}
-                <div>
-                    <ul class="list">
-                        {% for bonus in v %}
-                            <li>{{ bonus }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %}
-            {% endfor %}
+            <img class="small" src="{{ url_for('static', filename= 'img/' + get_image(eq['equipment'])) }}"></img>
+            {% if eq['tips']|length > 0 %}
+            <div>
+                <ul class="list">
+                    {% for bonus in eq['tips'] %}
+                        <li>{{ bonus }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         {% endfor %}
     </div>
     {% if build['tips']|length > 0 %}

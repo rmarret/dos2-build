@@ -19,12 +19,18 @@ build:
     memory: '~'
     wits: '+'
   abilities:
-    - warfare: '+2'
-    - necromancer: '+1'
-    - polymorph: '3'
-    - aerotheurge: '2'
-    - scoundrel: '1'
-    - hydrosophist: '1'
+    - ability: warfare
+      value: '+2'
+    - ability: necromancer
+      value: '+1'
+    - ability: polymorph
+      value: '3'
+    - ability: aerotheurge
+      value: '2'
+    - ability: scoundrel
+      value: '1'
+    - ability: hydrosophist
+      value: '1'
   talents:
   - Opportunist
   - Living Armour
@@ -47,11 +53,13 @@ build:
     - Uncanny Evasion
     - Adrenaline
   opt-skills:
-    - '1 target status preventing attacking'
+    - '1 target status preventing attacks'
     - '1 AP defensive or utility'
   equipments:
-    - sword: ['Crit Ch > Life Steal',  '> War > Str > 2H']
-    - armor: ['Balanced (Int) ; Arm > War > Necro', 'Nice: 2H, Wits, 1-2: Aer, Hydr, Scou']
+    - equipment: sword
+      tips: ['Crit Ch > Life Steal',  '> War > Str > 2H']
+    - equipment: armor
+      tips: ['Balanced (Int) ; Arm > War > Necro', 'Nice: 2H, Wits, 1-2: Aer, Hydr, Scou']
   tips:
     - 'Play offensively: Dmg & CC ; Keep Armors > 0'
     - 'Take out or CC Phy Dmg foes first'

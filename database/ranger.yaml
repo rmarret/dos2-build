@@ -19,10 +19,14 @@ build:
     memory: ''
     wits: '+1'
   abilities:
-    - warfare: 'Max'
-    - summoning: 'Max'
-    - huntsman: '3'
-    - ranged: '+'
+    - ability: warfare
+      value: 'Max'
+    - ability: summoning
+      value: 'Max'
+    - ability: huntsman
+      value: '3'
+    - ability: ranged
+      value: '+'
   talents:
   - Far Out Man
   - Elemental Ranger
@@ -49,13 +53,14 @@ build:
     - Elemental Arrowheads
     - Necromancer
     - Living Armour
-    - Necromancer
     - Encourage
     - 'Any Hunt Skill'
     - 'Any Summon Skill (Necro)'
   equipments:
-    - bow: ['Dmg > Bonus']
-    - armor: ['Balanced']
+    - equipment: bow
+      tips: ['Dmg > Bonus']
+    - equipment: armor
+      tips: ['Balanced']
   tips:
     - 'Position high & away'
     - 'Magic Dmg: elemental arrow, elemental Incarnate'

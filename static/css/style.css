@@ -2,6 +2,7 @@ html {
     background-color: white;
 }
 body {
+    margin: 0;
 }
 .container {
     background-color: black;

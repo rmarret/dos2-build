@@ -18,9 +18,12 @@ build:
     memory: ''
     wits: '~'
   abilities:
-    - warfare: '+2'
-    - geomancer: '+1'
-    - polymorph: '3'
+    - ability: warfare
+      value: '+2'
+    - ability: geomancer
+      value: '+1'
+    - ability: polymorph
+      value: '3'
   talents:
   - Opportunist
   - The Pawn
@@ -49,9 +52,12 @@ build:
     - Armour Of Frost
     - Spider Legs
   equipments:
-    - sword: []
-    - shield: []
-    - armor: ["Physical", "Master Rune"]
+    - equipment: sword
+      tips: []
+    - equipment: shield
+      tips: []
+    - equipment: armor
+      tips: ["Physical", "Master Rune"]
   tips:
     - "Petrifying Visage, scale with str, primary magic damage"
     - "Spider Legs at beginning"

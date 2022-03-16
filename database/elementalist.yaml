@@ -18,12 +18,18 @@ build:
     memory: '+1'
     wits: ''
   abilities:
-    - pyrokinetic: '3 / 5'
-    - aerotheurge: '3 / 5'
-    - hydrosophist: '3 / 5'
-    - geomancer: '3 / 5'
-    - polymorph: 'Max'
-    - ranged: '+'
+    - ability: pyrokinetic
+      value: '3 / 5'
+    - ability: aerotheurge
+      value: '3 / 5'
+    - ability: hydrosophist
+      value: '3 / 5'
+    - ability: geomancer
+      value: '3 / 5'
+    - ability: polymorph
+      value: 'Max'
+    - ability: ranged
+      value: '+'
   talents:
   - Mnemonic
   - Elemental Affinity
@@ -49,9 +55,12 @@ build:
     - More Elemental Skills
     - Some Necro Skills (Physical Dmg)
   equipments:
-    - wand: ['Bonus >> Dmg']
-    - shield: []
-    - armor: ['Int > Crit Chance', 'Nice: Pyro Hydro Geo Aero']
+    - equipment: wand
+      tips: ['Bonus >> Dmg']
+    - equipment: shield
+      tips: []
+    - equipment: armor
+      tips: ['Int > Crit Chance', 'Nice: Pyro Hydro Geo Aero']
   tips:
     - 'Control battle field, create barriers, do Dmg'
     - 'Complex to master: think before acting'
